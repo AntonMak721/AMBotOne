@@ -53,8 +53,7 @@ const start = async () => {
         const user = await UserModel.findOne({ chatId });
         return bot.sendMessage(
           chatId,
-          `Тебя зовут ${msg.from.first_name} ${msg.from.last_name}. В игре у тебя правильных ответов ${user.right}, а неправильных ${user.wrong}`
-        );
+          `Тебя зовут ${msg.from.first_name} ${msg.from.last_name}. В игре у тебя правильных ответов ${user.right}, а неправильных ${user.wrong}.`);
       }
 
       if (text === "/game") {
